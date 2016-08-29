@@ -14,4 +14,12 @@ angular.module('angularfireSlackApp')
                 authCtrl.error = error;
             });
         };
+
+        authCtrl.register - function() {
+            Auth.$createUser(authCtrl.user).then(function(user) {
+                authCtrl.login();
+            }, function(error) {
+                authCtrl.error = error;
+            });
+        };
     });

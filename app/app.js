@@ -31,4 +31,4 @@ angular
 
     $urlRouterProvider.otherwise('/');
   })
-  .constant('FirebaseUrl', 'https://slack.firebaseio.com/');
+  .constant('FirebaseUrl', 'https://jiapei-angular-slack.firebaseio.com/');

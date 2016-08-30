@@ -1,5 +1,5 @@
 angular.module('angularfireSlackApp')
-    .factory('Messages', function($firebaseArray, FirebaseUrl) {
+    .factory('Messages', ['$firebaseArray', 'FirebaseUrl', function($firebaseArray, FirebaseUrl) {
         var channelMessagesRef = new Firebase(FirebaseUrl + 'channelMessages');
         var userMessagesRef = new Firebase(FirebaseUrl + 'userMessages');
 
@@ -13,4 +13,4 @@ angular.module('angularfireSlackApp')
                 return $firebaseArray(userMessagesRef.child(path));
             }
         };
-    });
+    }]);

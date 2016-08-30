@@ -1,5 +1,5 @@
 angular.module('angularfireSlackApp')
-    .controller('ProfileCtrl', function($state, md5, auth, profile) {
+    .controller('ProfileCtrl', ['$state', 'md5', 'auth', 'profile', function($state, md5, auth, profile) {
         var profileCtrl = this;
 
         profileCtrl.profile = profile;
@@ -10,4 +10,4 @@ angular.module('angularfireSlackApp')
                 $state.go('channels');
             });
         };
-    });
+    }]);

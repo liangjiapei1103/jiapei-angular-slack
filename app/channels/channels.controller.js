@@ -1,5 +1,5 @@
 angular.module('angularfireSlackApp')
-    .controller('ChannelsCtrl', function($state, Auth, Users, profile, channels, Users) {
+    .controller('ChannelsCtrl', ['$state', 'Auth', 'Users', 'profile', 'channels', function($state, Auth, Users, profile, channels) {
         var channelsCtrl = this;
 
         channelsCtrl.users = Users.all;
@@ -39,4 +39,4 @@ angular.module('angularfireSlackApp')
                 $state.go('channels.messages', {channelId: ref.key()});
             });
         };
-    });
+    }]);

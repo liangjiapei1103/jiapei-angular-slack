@@ -1,5 +1,5 @@
 angular.module('angularfireSlackApp')
-    .controller('AuthCtrl', function(Auth, $state) {
+    .controller('AuthCtrl', ['Auth', '$state', function(Auth, $state) {
         var authCtrl = this;
 
         authCtrl.user = {
@@ -36,4 +36,4 @@ angular.module('angularfireSlackApp')
                 authCtrl.error = error;
             });
         };
-    });
+    }]);

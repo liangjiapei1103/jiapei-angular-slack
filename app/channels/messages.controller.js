@@ -1,5 +1,5 @@
 angular.module('angularfireSlackApp')
-    .controller('MessagesCtrl', function(profile, channelName, messages) {
+    .controller('MessagesCtrl', ['profile', 'channelName', 'messages', function(profile, channelName, messages) {
         var messagesCtrl = this;
 
         messagesCtrl.messages = messages;
@@ -18,4 +18,4 @@ angular.module('angularfireSlackApp')
                 });
             }
         }
-    });
+    }]);

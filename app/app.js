@@ -14,7 +14,7 @@ angular
     'angular-md5',
     'ui.router'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -131,9 +131,9 @@ angular
                  });
              }
          }
-      });
+     });
 
 
     $urlRouterProvider.otherwise('/');
-  })
+}])
   .constant('FirebaseUrl', 'https://jiapei-fireslack.firebaseio.com/');

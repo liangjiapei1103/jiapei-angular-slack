@@ -1,6 +1,8 @@
 angular.module('angularfireSlackApp')
-    .controller('ChannelsCtrl', function($state, Auth, Users, profile, channels) {
+    .controller('ChannelsCtrl', function($state, Auth, Users, profile, channels, Users) {
         var channelsCtrl = this;
+
+        channelsCtrl.users = Users.all;
 
         channelsCtrl.profile = profile;
         channelsCtrl.channels = channels;

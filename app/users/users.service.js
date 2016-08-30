@@ -8,6 +8,9 @@ angular.module('angularfireSlackApp')
                 return $firebaseObject(usersRef.child(uid));
             },
             getDisplayName: function(uid) {
+                console.log("uid: ", uid);
+                console.log("users: ", users);
+                console.log("record: ", users.$getRecord(uid));
                 return users.$getRecord(uid).displayName;
             },
             getGravatar: function(uid) {

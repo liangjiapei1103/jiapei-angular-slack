@@ -5,7 +5,7 @@ angular.module('angularfireSlackApp')
         channelsCtrl.profile = profile;
         channelsCtrl.channels = channels;
 
-        channesCtrl.getDisplayName = Users.getDisplayName;
+        channelsCtrl.getDisplayName = Users.getDisplayName;
         channelsCtrl.getGravatar = Users.getGravatar;
 
         channelsCtrl.logout = function() {

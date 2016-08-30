@@ -20,7 +20,7 @@ angular
         url: '/',
         templateUrl: 'home/home.html',
         resolve: {
-            requireAuth: function($state, Auth) {
+            requireNoAuth: function($state, Auth) {
                 return Auth.$requireAuth().then(function(auth) {
                     $state.go('channels');
                 }, function(error) {
@@ -92,6 +92,7 @@ angular
                         }
                     }) ;
                 }, function(error) {
+                    console.log("error, go home");
                     $state.go('home');
                 });
              }
@@ -106,4 +107,4 @@ angular
 
     $urlRouterProvider.otherwise('/');
   })
-  .constant('FirebaseUrl', 'https://jiapei-angular-slack.firebaseio.com/');
+  .constant('FirebaseUrl', 'https://jiapei-fireslack.firebaseio.com/');
